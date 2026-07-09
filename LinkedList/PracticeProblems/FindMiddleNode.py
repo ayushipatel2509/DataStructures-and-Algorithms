@@ -18,6 +18,21 @@ class LinkedList:
         return True
     
     def find_middle_node(self):
+        """
+        Finds and returns the value of the middle node using 
+        Floyd's Cycle-Finding (Tortoise and Hare) algorithm.
+        
+        How it works:
+        1. Two pointers ('slow' and 'fast') start at the head.
+        2. 'fast' moves 2 steps at a time, while 'slow' moves 1 step.
+        3. Because 'fast' moves twice as fast, the moment 'fast' 
+           reaches the end of the list, 'slow' will be perfectly 
+           positioned exactly in the middle.
+           
+        Safety Checks:
+        - 'fast is not None' handles even-lengthed lists.
+        - 'fast.next is not None' handles odd-lengthed lists.
+        """
         slow = self.head
         fast = self.head
         while fast is not None and fast.next is not None:
