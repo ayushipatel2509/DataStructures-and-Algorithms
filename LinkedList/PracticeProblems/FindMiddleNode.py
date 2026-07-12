@@ -35,7 +35,11 @@ class LinkedList:
         """
         slow = self.head
         fast = self.head
-        while fast is not None and fast.next is not None:
+        """
+        This condition return 1st node of second half (even length)
+        to return last node of first half use - while fast.next is not None and fast.next.next is not None:
+        """
+        while fast is not None and fast.next is not None: 
             fast = fast.next.next
             slow = slow.next
         return slow.value
