@@ -45,13 +45,6 @@ class LinkedList:
         head.next = self.reverse_k_group(temp, k)  # connect to the next group
         return before
 
-    def reverse_in_groups(self, k):
-        self.head = self.reverse_k_group(self.head, k)
-        # tail may have moved, so walk to find it
-        temp = self.head
-        while temp.next is not None:
-            temp = temp.next
-        self.tail = temp
 
 
 
@@ -62,7 +55,7 @@ for v in [2, 3, 4, 5, 6, 7, 8]:
 print("Before:")
 my_list.print_list()
 
-my_list.reverse_in_groups(3)
+my_list.reverse_k_groups(3)
 
 print("After reverse_in_groups(k=3):")
 my_list.print_list()
