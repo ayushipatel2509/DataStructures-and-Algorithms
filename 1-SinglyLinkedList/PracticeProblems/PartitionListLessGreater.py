@@ -40,10 +40,10 @@ class LinkedList:
         while current is not None:
             if current.value < x:
                 p1.next = current
-                p1 = current
+                p1 = p1.next
             else:
                 p2.next = current
-                p2 = current
+                p2 = p2.next
             current = current.next
         p2.next = None
         p1.next = dummy2.next
