@@ -22,4 +22,4 @@ def longest_substring_without_repeating_characters(s):
 
     return max_substring
 
-print(longest_substring_without_repeat_characters("abcabcbb"))  # 3
+print(longest_substring_without_repeating_characters("abcabcbb"))  # 3
